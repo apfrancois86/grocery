@@ -11,14 +11,16 @@ $(document).ready(function() {
       groceryInput.sort();
     });
 
-    console.log(groceryInput);
-
-    var output = groceryInput.map(function(item) {
+    var outputs = groceryInput.map(function(item) {
       return item.toUpperCase();
-      ("." + item).append(output);
+      ("." + item).text(outputs);
     });
 
-    $
+    outputs.forEach(function(output) {
+      $("#list").append("<li>" + output + "</li>");
+    });
+
+
     $("#list").show();
     $("form").hide();
 
